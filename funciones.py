@@ -27,3 +27,24 @@ def intermedio(a,b):
 
 punto_intermedio=intermedio(10,12)
 print(f"El punto intermedio entre 10 y 4 es {punto_intermedio}")
+
+# Realizar una función que se llame separar() que reciba una lista de nros y devuelva dos listas ordenadas.
+# La primera con nros pares y la segunda con nros impares
+
+def separar(numeros):
+    pares=[]
+    impares=[]
+
+    for numero in numeros:
+        if numero%2==0:
+            pares.append(numero)
+        else:
+            impares.append(numero)
+    
+    return pares,impares
+
+numeros=[5,6,7,1,2,3]
+pares,impares=separar(numeros)
+print(numeros)
+print(f"Los numeros pares son {pares}")
+print(f"Los numeros impares son {impares}")
