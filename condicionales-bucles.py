@@ -24,3 +24,16 @@ elif opcion==2:
     print(f"La resta es {b-c}")
 elif opcion==3:
     print(f"La multiplicación es {b*c}")
+
+# Definir una lista de números y mostrar por pantalla el valor promedio. No utilizar funciones nativas sum() o len()
+
+numeros=[1,3,4,6,8,9]
+contador=0
+suma=0
+
+for numero in numeros:
+    suma+=numero
+    contador+=1
+
+print(numeros)
+print(f"El promedio de la lista es {suma/contador}")
