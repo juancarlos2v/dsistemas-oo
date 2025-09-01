@@ -37,3 +37,15 @@ for numero in numeros:
 
 print(numeros)
 print(f"El promedio de la lista es {suma/contador}")
+
+# Definir una lista de números, encontrar el valor mínimo de la lista e imprimirlo. No utilizar la función nativa min().
+
+valores=[89,5,4,7,9,2]
+minimo=valores[0]
+
+for valor in valores:
+    if valor<minimo:
+        minimo=valor
+
+print(valores)
+print(f"El valor minimo es {minimo}")
