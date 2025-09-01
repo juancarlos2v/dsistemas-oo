@@ -19,5 +19,11 @@ def relacion(a,b):
     if a==b:
         return 0
 
-rel=relacion(2,2)
-print(rel)
+# Realizar una función que se llame intermedio() que a partir de dos nros devuelva el punto intermedio. 
+# Ej. El punto intermedio entre 10 y 24 = 17; entre 12 y 50 = 31.
+
+def intermedio(a,b):
+    return (a+b)/2
+
+punto_intermedio=intermedio(10,12)
+print(f"El punto intermedio entre 10 y 4 es {punto_intermedio}")
