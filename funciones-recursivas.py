@@ -8,3 +8,8 @@ def suma_enteros(numero):
 
 total=suma_enteros(5) 
 print(f"La suma entre los numeros 0 a 3 es {total}")
+
+# Escribir una función recursiva que permita mostrar los valores de un vector de atrás hacia adelante.
+
+def atras_vector(numeros):
+    pass
