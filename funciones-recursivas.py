@@ -12,4 +12,11 @@ print(f"La suma entre los numeros 0 a 3 es {total}")
 # Escribir una función recursiva que permita mostrar los valores de un vector de atrás hacia adelante.
 
 def atras_vector(numeros):
-    pass
+    tamaño=len(numeros)
+
+    if tamaño>0:
+        print(numeros[tamaño-1])
+        numeros.pop()
+        atras_vector(numeros)
+
+atras_vector([2,5,6,7])
