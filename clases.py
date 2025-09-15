@@ -48,3 +48,36 @@ cuenta.aplicarInteres()
 cuenta.depositar(300)
 
 print("============================================================")
+
+#Modela una clase Persona con atributos nombre y edad. Incluye un método presentarse. 
+# Crea una subclase Alumno que herede de Persona y añada un atributo carrera y un método estudiar (debe imprimir que el alumno está estudiando su carrera). 
+# Implementa un método adicional cambiar_carrera que permita al alumno cambiar su carrera, asegurándose de que la nueva carrera no sea igual a la anterior.
+
+class Persona:
+    def __init__(self,nombre,edad):
+        self.nombre=nombre
+        self.edad=edad
+    
+    def presentarse(self):
+        print(f"Hola, mi nombre es {self.nombre} tengo {self.edad} años")
+
+class Alumno(Persona):
+    def __init__(self, nombre, edad,carrera):
+        super().__init__(nombre, edad)
+        self.carrera=carrera
+
+    def estudiar(self):
+        print(f"El alumno {self.nombre} esta estudiando la carrera de {self.carrera}")
+
+    def cambiar_carrera(self,carrera):
+        if(self.carrera!=carrera):
+            self.carrera=carrera
+        else:
+            print("La nueva carrera debe ser distinta a la anterior")
+
+alumno= Alumno("Juan Carlos",25,"Arquitectura")
+alumno.presentarse()
+alumno.estudiar()
+alumno.cambiar_carrera("Analisis de Sistemas")
+alumno.estudiar()
+    
