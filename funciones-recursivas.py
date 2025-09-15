@@ -20,3 +20,8 @@ def atras_vector(numeros):
         atras_vector(numeros)
 
 atras_vector([2,5,6,7])
+
+# Implementar una función recursiva que permita recorrer una matriz y mostrar sus valores
+
+def mostrar_valores(matriz):
+    pass
