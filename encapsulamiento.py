@@ -101,3 +101,46 @@ class Cuenta_bancaria:
         print(f"SU SALDO ES {self.saldo} pesos.")
 
 print("============================================================")
+
+#Encapsulamiento Avanzado: Diseña una clase Biblioteca que tenga una lista de Libros. 
+# Los libros deben ser accesibles solo mediante métodos de la Biblioteca, como agregar_libro, remover_libro, y mostrar_libros.
+
+class Biblioteca:
+    def __init__(self):
+        self.libros=[]
+    
+    def agregar_libros(self,libro):
+        if libro not in self.libros:
+            self.libros.append(libro)
+        else:
+            print("EL LIBRO YA SE ENCUENTRA EN LA BIBLIOTECA")
+    
+    def mostrar_libros(self):
+        for index,libro in enumerate(self.libros):
+            print(f"{index+1}: {libro.titulo}")
+
+    def remover_libro(self):
+        self.mostrar_libros()
+        index=int(input("Elija que libro quiere eliminar: "))
+        if index > len(self.libros) :
+            print("⚠️ LIBRO NO ENCONTRADO")
+        else: 
+            self.libros.pop(index-1)
+
+class Libro:
+    def __init__(self,titulo,autor):
+        self.titulo=titulo
+        self.autor=autor
+
+libro_1=Libro("Pandemia","Alan Holan")
+libro_2=Libro("Sociedad y Estado", "Weber")
+libro_3=Libro("Tecnologia XXI","Cesar Portland")
+
+biblioteca= Biblioteca()
+biblioteca.agregar_libros(libro_1)
+biblioteca.agregar_libros(libro_2)
+biblioteca.agregar_libros(libro_3)
+
+# biblioteca.mostrar_libros()
+
+biblioteca.remover_libro()
