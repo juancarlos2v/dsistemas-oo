@@ -82,3 +82,22 @@ disco_duro=Disco_Duro("1TB","HDD")
 ordenador=Ordenador(procesador,ram,disco_duro)
 
 print("============================================================")
+# Encapsulamiento Simple: Crea una clase CuentaBancaria con atributos saldo (privado) y métodos para depositar, retirar, y mostrar_saldo. 
+# Implementa un control de acceso para evitar que el saldo sea negativo.
+class Cuenta_bancaria:
+    def __init__(self,saldo):
+        self.__saldo=saldo
+    
+    def depositar(self,monto):
+        self.saldo=self.saldo+monto
+    
+    def retirar(self, monto):
+        if self.saldo<monto:
+            print("NO CUENTA CON SALDO SUFICIENTE PARA ESTA OPERACION")
+        else:
+            self.saldo=self.saldo-monto
+    
+    def mostrar_saldo(self):
+        print(f"SU SALDO ES {self.saldo} pesos.")
+
+print("============================================================")
