@@ -32,7 +32,8 @@ print('Pacientes:')
 doctor.ver_paciente()
 
 print("============================================================")
-# Agregación: Crea una clase Universidad que contenga múltiples Facultades, y una clase Facultad que tenga un nombre y una lista de Carreras. Muestra cómo agregar facultades a una universidad y carreras a una facultad.
+# Agregación: Crea una clase Universidad que contenga múltiples Facultades, y una clase Facultad que tenga un nombre y una lista de Carreras. 
+# Muestra cómo agregar facultades a una universidad y carreras a una facultad.
    
 class Universidad:
     def __init__(self):
@@ -47,5 +48,37 @@ class Facultad:
         self.nombre=nombre
         self.carreras=[]
     
-    def agregar_universidad(self,universidad):
-        pass
+    def agregar_universidad(self,carrera):
+        if carrera not in self.carreras:
+            self.carreras.append(carrera)
+
+#Composición: Modela un Ordenador que tiene un Procesador, RAM, y Disco Duro. 
+# Implementa las clases correspondientes y muestra cómo un Ordenador puede estar compuesto por estos elementos.
+
+class Ordenador:
+    def __init__(self,procesador,ram,disco_duro):
+        self.procesador=procesador
+        self.ram=ram
+        self.disco_duro=disco_duro
+
+class Procesador:
+    def __init__(self,frecuencia,nucleos):
+        self.frecuencia=frecuencia
+        self.nucleos=nucleos
+    
+class Ram:
+    def __init__(self,capacidad, velocidad):
+        self.capacidad=capacidad
+        self.velocidad=velocidad
+
+class Disco_Duro:
+    def __init__(self,capacidad,tipo):
+        self.capacidad=capacidad
+        self.tipo=tipo
+
+procesador=Procesador("1hz","4")
+ram=Ram("32GB","100Ghz")
+disco_duro=Disco_Duro("1TB","HDD")
+ordenador=Ordenador(procesador,ram,disco_duro)
+
+print("============================================================")
