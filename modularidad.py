@@ -31,3 +31,21 @@ print('-------------------')
 print('Pacientes:')
 doctor.ver_paciente()
 
+print("============================================================")
+# Agregación: Crea una clase Universidad que contenga múltiples Facultades, y una clase Facultad que tenga un nombre y una lista de Carreras. Muestra cómo agregar facultades a una universidad y carreras a una facultad.
+   
+class Universidad:
+    def __init__(self):
+        self.facultades=[]
+    
+    def agregar_facultades(self,facultad):
+        if facultad not in self.facultades:
+            self.facultades.append(facultad)   
+
+class Facultad:
+    def __init__(self,nombre):
+        self.nombre=nombre
+        self.carreras=[]
+    
+    def agregar_universidad(self,universidad):
+        pass
